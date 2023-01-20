@@ -1,0 +1,44 @@
+body {
+    background-color: beige;
+}
+
+h1{
+    background-color: brown;
+    color: beige;
+    text-align: center;
+    border-radius: 100px;
+}
+
+.container {
+    display: flex;
+}
+
+.list-container {
+    background-color: burlywood;
+    flex: 5;
+}
+
+.form-container {
+    background-color: cadetblue;
+    flex: 3;
+}
+
+.my-form {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.my-form label{
+    display: block;
+    width: 90px;
+}
+
+.main-icon{
+    color: #efef6b;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#iImportant.important {
+    color: brown;
+}
