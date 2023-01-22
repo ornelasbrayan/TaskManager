@@ -15,11 +15,13 @@ h1{
 
 .list-container {
     background-color: burlywood;
+    margin-right: 2px;
     flex: 5;
 }
 
 .form-container {
     background-color: cadetblue;
+    margin-left: 2px;
     flex: 3;
 }
 
@@ -41,4 +43,12 @@ h1{
 
 #iImportant.important {
     color: brown;
+}
+
+.task{
+    display: flex;
+}
+
+.task label{
+    display: block;
 }

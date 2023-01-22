@@ -1,5 +1,7 @@
 var importantIcon = "fa-solid fa-triangle-exclamation important";
 var nonImportantIcon = "fa-solid fa-star";
+var isImportant = false;
+
 
 function toggleForm(){
     console.log("Button clicked");
@@ -7,11 +9,52 @@ function toggleForm(){
     $(".form-container").toggle();
 }
 
-function toggleImportant(){
-    console.log("Icon Clicked");
+function saveTask(){
+    console.log("Saved");
+    let title = $("#txtTittle").val();
+    let desc = $("#txtDescription").val();
+    let dueDate = $("#selDueDate").val();
+    let category = $("#selCategory").val();
+    let contact = $("#txtContact").val();
+    let status = $("#selStatus").val();
 
-    $("#iImportant").removeClass(nonImportantIcon);
-    $("#iImportant").addClass(importantIcon);
+    let task = new Task(title, desc, dueDate, category, contact, status, isImportant);
+    displayTask(task);
+}
+
+function displayTask(task){
+    let syntax = `<div class="task">
+        <div>
+            <h3>${task.title}</h3>
+            <p>${task.description}</p>
+        </div>
+
+        <div>
+            <label>${task.dueDate}</label>
+            <label>${task.category}</label>
+        </div>
+
+        <div>
+            <label>${task.contact}</label> 
+            <label>${task.status}</label>
+        </div>
+        
+    </div>`;
+    $(".list-container").append(syntax);
+
+}
+
+function toggleImportant(){
+    if(isImportant){
+        // change to non important
+        $("#iImportant").removeClass(importantIcon).addClass(nonImportantIcon);
+        isImportant = false;
+
+    }else{
+        // change to important
+        $("#iImportant").removeClass(nonImportantIcon).addClass(importantIcon);
+        isImportant = true;
+    }
 }
 
 function init(){
@@ -21,6 +64,7 @@ function init(){
     // assigns events
     $("#iImportant").click(toggleImportant);
     $("#btnToggleForm").click(toggleForm);
+    $("#btnSave").click(saveTask);
 
 }
 
