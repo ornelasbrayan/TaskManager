@@ -11,17 +11,22 @@ h1{
 
 .container {
     display: flex;
+    background-image: url('https://images.pexels.com/photos/949587/pexels-photo-949587.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 96vh;
 }
 
 .list-container {
-    background-color: burlywood;
-    margin-right: 2px;
+    /* background-color: burlywood; */
+    padding: 20px 30px;
     flex: 5;
 }
 
 .form-container {
-    background-color: cadetblue;
+    background-color: rgba(95, 158, 160, 0.705);
     margin-left: 2px;
+    padding: 20px 30px;
     flex: 3;
 }
 
@@ -47,8 +52,28 @@ h1{
 
 .task{
     display: flex;
+    background-color: rgba(255, 255, 255, 0.664);
+    border: 1px solid black;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    margin-bottom: 12px;
 }
 
 .task label{
     display: block;
+    margin-bottom: 5px;
+}
+
+.task .col1{
+    flex: 4;
+}
+
+.task .col2{
+    flex: 1;
+}
+
+.task .col3{
+    flex: 1;
 }
