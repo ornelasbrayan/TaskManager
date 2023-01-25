@@ -7,6 +7,7 @@ h1{
     color: beige;
     text-align: center;
     border-radius: 100px;
+    font-size: 40px;
 }
 
 .container {
@@ -14,11 +15,10 @@ h1{
     background-image: url('https://images.pexels.com/photos/949587/pexels-photo-949587.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 96vh;
+    height: 150vh;
 }
 
 .list-container {
-    /* background-color: burlywood; */
     padding: 20px 30px;
     flex: 5;
 }
@@ -28,6 +28,10 @@ h1{
     margin-left: 2px;
     padding: 20px 30px;
     flex: 3;
+}
+
+#btnToggleForm{
+    margin-bottom: 15px;
 }
 
 .my-form {
@@ -53,11 +57,11 @@ h1{
 .task{
     display: flex;
     background-color: rgba(255, 255, 255, 0.664);
-    border: 1px solid black;
+    border: 2px solid black;
     padding: 10px;
     justify-content: center;
     align-items: center;
-    border-radius: 4px;
+    border-radius: 10px;
     margin-bottom: 12px;
 }
 
@@ -76,4 +80,77 @@ h1{
 
 .task .col3{
     flex: 1;
+}
+
+.saveButton{
+    box-shadow: 0px 10px 14px -7px #276873;
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color:#599bb3;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:10px 20px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+
+.saveButton:hover{
+    background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+
+.saveButton:active{
+    position:relative;
+	top:1px;
+}
+
+.btnToggle{
+    box-shadow: 3px 4px 0px 0px #9fb4f2;
+	background:linear-gradient(to bottom, #7892c2 5%, #273547 100%);
+	background-color:#7892c2;
+	border-radius:15px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+}
+
+.btnToggle:hover{
+    background:linear-gradient(to bottom, #273547 5%, #7892c2 100%);
+	background-color:#273547;
+}
+
+.btnToggle:active{
+    position:relative;
+	top:1px;
+}
+
+.listLabel{
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.90rem;
+    font-weight: 900;
+    letter-spacing: 0.105rem;
+    font-style: italic;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: 1.25rem;
+    -webkit-border-radius: 1.25rem;
+    -moz-border-radius: 1.25rem;
+    padding: 0.35rem 0.75rem;
+    border-style: solid;
+    border-width: 0.125rem;
+    border-color: #fffefe;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    
 }

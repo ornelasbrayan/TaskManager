@@ -30,6 +30,7 @@ function saveTask(){
 
             // display logic
             displayTask(task);
+            clearForm();
         },
         error: function(error){
             console.log(error);
@@ -40,6 +41,15 @@ function saveTask(){
 
 }
 
+function clearForm(){
+    $("#txtTittle").val("");
+    $("#txtDescription").val("");
+    $("#selDueDate").val("");
+    $("#selCategory").val("-- select an option --");
+    $("#txtContact").val("");
+    $("#selStatus").val("-- select an option --");
+}
+
 function displayTask(task){
     let syntax = `<div class="task">
         <div  class="col1">
@@ -48,12 +58,16 @@ function displayTask(task){
         </div>
 
         <div class="col2">
+            <h4>Due Date</h3>
             <label>${task.dueDate}</label>
+            <h4>Category</h3>
             <label>${task.category}</label>
         </div>
 
         <div class="col3">
+            <h4>Contact</h3>
             <label>${task.contact}</label> 
+            <h4>Status</h3>
             <label>${task.status}</label>
         </div>
         
